@@ -10,9 +10,9 @@ close all;
 %% Vector de tiempo discreto
 n = -20:20;
 
-%% =========================================================
+
 %% 1. PULSO RECTANGULAR A PARTIR DE ESCALONES u[n]
-%% =========================================================
+
 
 % Definición del escalón unitario
 u1 = double(n >= 0);
@@ -34,9 +34,9 @@ x_reflejada = double(-n >= 0) - double(-n >= 6);
 x_escalada = 2 * x_rect;
 
 
-%% =========================================================
+
 %% GRAFICAS DEL PULSO RECTANGULAR
-%% =========================================================
+
 
 figure;
 
@@ -69,10 +69,10 @@ xlabel('n');
 ylabel('Amplitud');
 
 
-%% =========================================================
+
 %% 2. SECUENCIA FINITA COMO SUMA DE IMPULSOS
 %% x[n] = SUMA x[k] delta[n-k]
-%% =========================================================
+
 
 % Valores de la secuencia
 k = [-3 -2 -1 0 1 2 3];
@@ -104,9 +104,9 @@ xlabel('n');
 ylabel('x[n]');
 
 
-%% =========================================================
+
 %% TRANSFORMACIONES DE LA SECUENCIA DE IMPULSOS
-%% =========================================================
+
 
 % Desplazamiento hacia la derecha: x[n-2]
 x_imp_desplazada = zeros(size(n));
@@ -154,9 +154,9 @@ xlabel('n');
 ylabel('Amplitud');
 
 
-%% =========================================================
+
 %% 3. TREN DE PULSOS PERIODICO
-%% =========================================================
+
 
 % Periodo
 N = 8;
@@ -208,9 +208,9 @@ end
 tren_escalado = 2*tren_pulsos;
 
 
-%% =========================================================
+
 %% GRAFICAS DEL TREN DE PULSOS
-%% =========================================================
+
 
 figure;
 
@@ -241,8 +241,3 @@ grid on;
 title('Tren escalado en amplitud');
 xlabel('n');
 ylabel('Amplitud');
-
-
-%% =========================================================
-%% FIN DEL PROGRAMA
-%% =========================================================
